@@ -15,6 +15,10 @@ class CreateInternalPlansTable extends Migration
     {
         Schema::create('internal_plans', function (Blueprint $table) {
             $table->id()->comment("Table's unique identifier");
+            $table->foreignId('organ_id')
+                ->constrained()
+                ->onDelete('cascade')
+                ->comment('Organ foreign key');
             $table->string('code')->comment('SIAFI internal plan code');
             $table->string('description')->comment('Internal plan description');
             $table->boolean('status')->default(true)->comment('Active or inactive status');
