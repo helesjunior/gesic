@@ -12,9 +12,9 @@ use Illuminate\Support\Collection;
 /**
  * Has methods to show all available languages and save chosen user's language option.
  *
- * @category SigEx
+ * @category GeSic
  * @package App\Aid\Languages
- * @copyright 2019~2029 SigEx
+ * @copyright 2019~2029 GeSic
  * @license MIT License. <https://opensource.org/licenses/MIT>
  * @author Anderson Sathler M. Ribeiro <asathler@gmail.com>
  */

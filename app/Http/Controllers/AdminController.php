@@ -17,7 +17,7 @@ class AdminController extends Controller
     {
         $this->data['title'] = trans('dashboard'); // set the page title
         $this->data['breadcrumbs'] = [
-            trans('Sigex')     => backpack_url('dashboard'),
+            trans('GeSic')     => backpack_url('dashboard'),
             trans('dashboard') => false,
         ];
 
