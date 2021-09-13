@@ -33,7 +33,7 @@ class CreditorsCrudController extends CrudController
         CRUD::setEntityNameStrings('creditors', 'creditors');
 
         $this->data['breadcrumbs'] = [
-            trans('Sigex') => backpack_url('dashboard'),
+            trans('GeSic') => backpack_url('dashboard'),
             trans('Creditors') => false,
         ];
     }

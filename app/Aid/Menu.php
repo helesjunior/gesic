@@ -13,9 +13,9 @@ use Illuminate\Support\Collection;
 /**
  * Contains all methods to create a dynamic array with menu options to future display.
  *
- * @category SigEx
+ * @category GeSic
  * @package App\Aid\Menu
- * @copyright 2019~2029 SigEx
+ * @copyright 2019~2029 GeSic
  * @license MIT License. <https://opensource.org/licenses/MIT>
  * @author Anderson Sathler M. Ribeiro <asathler@gmail.com>
  */
