@@ -36,8 +36,6 @@ class CreateFinancialStatementsTable extends Migration
 
             $table->foreign('people_id')->references('id')->on('people')->onDelete('cascade');
 
-            $table->timestamps();
-            $table->softDeletes();
         });
     }
 
