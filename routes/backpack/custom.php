@@ -35,4 +35,7 @@ Route::group([
     Route::crud('nature_expenditure/{code}/sub_item', 'NatureExpenditureSubItemCrudController');
     Route::crud('unit', 'UnitCrudController');
 
+    Route::get('testesiorg', 'UnitCrudController@testeSiorg');
+
+    Route::crud('siorg', 'SiorgCrudController');
 }); // this should be the absolute last line of this file

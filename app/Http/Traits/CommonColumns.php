@@ -458,7 +458,7 @@ trait CommonColumns
     }
 
     /**
-     * Add column to grid view for SIORG Code field.
+     * Add column to grid view for Integrations Code field.
      *
      * @author Anderson Sathler M. Ribeiro <asathler@gmail.com>
      */

@@ -42,6 +42,7 @@ class Menu extends Collection
     const COUNTRIES = '/country';
     const STATES = '/state';
     const CITIES = '/city';
+    const SIORGS = '/siorg';
     const NATURE_EXPENDITURES = '/nature_expenditure';
 
     protected $currentUri;
@@ -242,10 +243,11 @@ class Menu extends Collection
         $this->item('states', self::STATES)
             ->icon('la la-map')
             ->parent('data');
-        /*
         $this->item('cities', self::CITIES)
             ->icon('la la-map-marked-alt')
             ->parent('data');
-        */
+        $this->item('siorg', self::SIORGS)
+            ->icon('la la-map')
+            ->parent('data');
     }
 }

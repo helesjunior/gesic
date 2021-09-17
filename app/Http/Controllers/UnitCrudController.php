@@ -5,12 +5,14 @@
  *
  * @author Anderson Sathler M. Ribeiro <asathler@gmail.com>
  */
+
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UnitRequest;
 use App\Http\Traits\CommonColumns;
 use App\Http\Traits\CommonFields;
 use App\Http\Traits\CommonFilters;
+use App\Integrations\SiorgWS;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
 use Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
@@ -124,5 +126,13 @@ class UnitCrudController extends CrudController
     protected function setupUpdateOperation()
     {
         $this->setupCreateOperation();
+    }
+
+    public function testeSiorg()
+    {
+        $search = new SiorgWS();
+
+        $search->index('46', '1');
+
     }
 }

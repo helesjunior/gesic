@@ -17,7 +17,7 @@ class CreateUnitsTable extends Migration
             $table->id()->comment("Table's unique identifier");
             $table->string('siafi_code')->unique()->comment('Unique SIAFI code for unit');
             $table->string('siasg_code')->unique()->nullable()->comment('Unique SIASG code for unit');
-            $table->string('siorg_code')->unique()->nullable()->comment('Unique SIORG code for unit');
+            $table->string('siorg_code')->unique()->nullable()->comment('Unique Integrations code for unit');
             $table->string('description', 255)->comment('Unit description');
             $table->string('short_name', 50)->comment('Unit short or abbreviate name');
             $table->integer('country_id')->nullable()->comment('Country foreign key');

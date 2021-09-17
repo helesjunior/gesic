@@ -19,5 +19,6 @@ return [
     'states'                => 'Estados',
     'units'                 => 'Unidades Gestoras',
     'users'                 => 'Usuários',
+    'siorg'                 => 'Siorgs',
 
 ];

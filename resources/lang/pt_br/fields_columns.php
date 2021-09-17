@@ -1,23 +1,23 @@
 <?php
 
-// Please note it is recommended to use the subtag [pt-BR], not [pr_BR]
-// That is the one formalized by the W3C in the IANA Language Subtag Registry
-// - https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
-// - https://www.w3.org/International/questions/qa-choosing-language-tags
-//
-// Also, that is the one used by the most popular Laravel translation package
-// - https://github.com/caouecs/Laravel-lang/tree/master/src
-//
-// Backpack provides translations for both subtags, for backwards compatibility.
-// But this will change at some point, and we will only support [pt-BR].
+/**
+ * Translate.
+ * @package Resource/Views/Lang/pt_br
+ * @author Heles R. Silva Júnior <helesjunior@gmail.com>
+ */
 
 return [
 
-    /**
-     * Translate.
-     * @package Resource/Views/Lang/pt_br
-     * @author Heles R. Silva Júnior <helesjunior@gmail.com>
-     */
+    /*
+    |--------------------------------------------------------------------------
+    | Common Fields and Columns
+    |--------------------------------------------------------------------------
+    |
+    | The following language lines are used by the CRUD interface.
+    | You are free to change them to anything
+    | you want to customize your views to better match your application.
+    |
+    */
 
     'short_name' => 'Nome resumido',
     'abbreviation' => 'Abreviação',
@@ -44,7 +44,7 @@ return [
     'phone' => 'Telefone',
     'siafi_code' => 'Código SIAFI',
     'siasg_code' => 'Código SIASG',
-    'siorg_code' => 'Código SIORG',
+    'siorg_code' => 'Código Integrations',
     'status' => 'Situação',
     'timezone' => 'Timezone',
     'type_of_creditor' => 'Tipo fornecedor',
