@@ -127,12 +127,4 @@ class UnitCrudController extends CrudController
     {
         $this->setupCreateOperation();
     }
-
-    public function testeSiorg()
-    {
-        $search = new SiorgWS();
-
-        $search->index('46', '1');
-
-    }
 }

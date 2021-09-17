@@ -21,6 +21,7 @@ class CreateOrgansTable extends Migration
                 ->comment('Higher organ foreign key');
 
             $table->string('code')->unique()->comment('Unique SIAFI code for organ');
+            $table->string('code_siorg')->comment('Unique SIAFI code for organ');
             $table->string('name')->comment('Organ name');
             $table->boolean('status')->default(true)->comment('Active or inactive status');
 
