@@ -63,6 +63,7 @@ return [
     'error_saving'           => 'Erro ao salvar. Por favor, tente novamente.',
     'welcome'                => 'Bem vindo!',
     'use_sidebar'            => 'Use a barra de menu à esquerda para criar, editar ou excluir conteúdo.',
+    'text_dashboard'         => 'Essa é a ferramenta GeSIC - Gestão do Sistema de Informação de Custos.',
 
     'password_reset'         => [
         'greeting' => 'Olá!',

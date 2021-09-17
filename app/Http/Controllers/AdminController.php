@@ -15,10 +15,10 @@ class AdminController extends Controller
 
     public function index()
     {
-        $this->data['title'] = trans('dashboard'); // set the page title
+        $this->data['title'] = trans('base.dashboard'); // set the page title
         $this->data['breadcrumbs'] = [
             trans('GeSic')     => backpack_url('dashboard'),
-            trans('dashboard') => false,
+            trans('base.dashboard') => false,
         ];
 
         return view(backpack_view('dashboard'), $this->data);

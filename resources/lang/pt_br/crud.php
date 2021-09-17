@@ -171,4 +171,10 @@ return [
         'basic_information' => 'Informações básicas',
         'additional_information' => 'Informações adicionais',
     ],
+
+    // CRUD Units
+    'units' => [
+        'units' => 'Unidades',
+        'unit' => 'Unidade',
+    ],
 ];
