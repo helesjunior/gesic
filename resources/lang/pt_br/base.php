@@ -43,7 +43,7 @@ return [
     'click_here_to_reset'    => 'Clique aqui para resetar sua senha',
     'change_password'        => 'Mudar senha',
     'unauthorized'           => 'Sem autorização.',
-    'dashboard'              => 'Dashboard',
+    'dashboard'              => 'Início',
     'handcrafted_by'         => 'Feito por',
     'powered_by'             => 'Distribuído por',
     'my_account'             => 'Minha conta',

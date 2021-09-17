@@ -35,11 +35,11 @@ class Languages
                 'flag' => 'br',
                 'name' => 'Português',
             ],
-            [
-                'code' => 'en',
-                'flag' => 'us',
-                'name' => 'English',
-            ],
+//            [
+//                'code' => 'en',
+//                'flag' => 'us',
+//                'name' => 'English',
+//            ],
         ]);
     }
 

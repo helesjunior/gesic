@@ -12,7 +12,7 @@ use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 use Illuminate\Database\Eloquent\Builder;
 
 /**
- * Trait CommonFields for Backpack common fields.
+ * Trait CommonFields for Backpack common fields_columns.
  *
  * @package App\Http\Traits
  * @example Method name for generic fields should be 'addField' + 'Name' + 'Text/Combo/Checkbox/...()'
@@ -36,7 +36,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'abbreviation',
-            'label' => 'Abbreviation',
+            'label' => __('fields_columns.abbreviation'),
             'type' => 'text',
             'tab' => $tab
         ]);
@@ -51,7 +51,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'address',
-            'label' => 'Address',
+            'label' => __('fields_columns.address'),
             'type' => 'text',
             'attributes' => [
                 'onkeyup' => 'maiuscula(this)'
@@ -69,7 +69,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'alpha2_code',
-            'label' => 'Alpha 2 code',
+            'label' => __('fields_columns.alpha2_code'),
             'type' => 'text',
             'attributes' => [
                 'onkeyup' => 'minusculo(this)'
@@ -87,7 +87,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'alpha3_code',
-            'label' => 'Alpha 3 code',
+            'label' => __('fields_columns.alpha3_code'),
             'type' => 'text',
             'attributes' => [
                 'onkeyup' => 'maiuscula(this)'
@@ -121,7 +121,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'complement',
-            'label' => 'Complement',
+            'label' => __('fields_columns.complement'),
             'type' => 'text',
             'attributes' => [
                 'onkeyup' => 'maiuscula(this)'
@@ -139,12 +139,12 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'city_id',
-            'label' => 'City',
+            'label' => __('fields_columns.city'),
             'type' => 'relationship',
             'model' => 'App\Models\City',
             'entity' => 'city',
             'attribute' => 'name',
-            'placeholder' => 'Select city',
+            'placeholder' => __('fields_columns.select') . ' ' . __('fields_columns.city'),
             'allows_null' => true,
             'options' => (function (Builder $query) {
                 return $query->orderBy('name', 'ASC')
@@ -164,7 +164,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'consortium',
-            'label' => 'Consortium?',
+            'label' => __('fields_columns.consortium'),
             'type' => 'checkbox',
             'tab' => $tab
         ]);
@@ -179,7 +179,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'contact_agent',
-            'label' => 'Contact agent',
+            'label' => __('fields_columns.contact_agent'),
             'type' => 'text',
             'attributes' => [
                 'onkeyup' => 'maiuscula(this)'
@@ -197,12 +197,12 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'country_id',
-            'label' => 'Country',
+            'label' => __('fields_columns.country'),
             'type' => 'relationship',
             'model' => 'App\Models\Country',
             'entity' => 'country',
             'attribute' => 'name',
-            'placeholder' => 'Select country',
+            'placeholder' => __('fields_columns.select') . ' ' . __('fields_columns.country'),
             'allows_null' => true,
             'options' => (function (Builder $query) {
                 return $query->orderBy('name', 'ASC')
@@ -222,7 +222,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'code',
-            'label' => 'Code',
+            'label' => __('fields_columns.code'),
             'type' => 'code_creditor',
             'attributes' => [
                 'id' => 'code',
@@ -240,12 +240,12 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'currency_id',
-            'label' => 'Currency',
+            'label' => __('fields_columns.currency'),
             'type' => 'relationship',
             'model' => 'App\Models\Currency',
             'entity' => 'currency',
             'attribute' => 'name',
-            'placeholder' => 'Select currency',
+            'placeholder' => __('fields_columns.select') . ' ' . __('fields_columns.currency'),
             'allows_null' => true,
             'options' => (function (Builder $query) {
                 return $query->orderBy('name', 'ASC')
@@ -264,7 +264,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'description',
-            'label' => 'Description',
+            'label' => __('fields_columns.description'),
             'type' => 'text',
             'tab' => $tab
         ]);
@@ -279,7 +279,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'full_name',
-            'label' => 'Full name',
+            'label' => __('fields_columns.full_name'),
             'type' => 'text',
             'tab' => $tab
         ]);
@@ -294,7 +294,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'is_capital',
-            'label' => 'Is capital',
+            'label' => __('fields_columns.is_capital'),
             'type' => 'checkbox',
             'default' => false,
             'tab' => $tab
@@ -309,8 +309,8 @@ trait CommonFields
     protected function addFieldIsVisibleCheckbox($tab = null)
     {
         CRUD::addField([
-            'name' => 'is_visibla',
-            'label' => 'Is visible',
+            'name' => 'is_visible',
+            'label' => __('fields_columns.is_visible'),
             'type' => 'checkbox',
             'default' => true,
             'tab' => $tab
@@ -326,7 +326,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'latitude',
-            'label' => 'Latitude',
+            'label' => __('fields_columns.latitude'),
             'type' => 'text',
             'tab' => $tab
         ]);
@@ -341,7 +341,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'longitude',
-            'label' => 'Longitude',
+            'label' => __('fields_columns.longitude'),
             'type' => 'text',
             'tab' => $tab
         ]);
@@ -356,7 +356,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'name',
-            'label' => 'Name',
+            'label' => __('fields_columns.name'),
             'type' => 'text',
             'attributes' => [
                 'onkeyup' => $upper ? 'maiuscula(this)' : ''
@@ -374,7 +374,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'notes',
-            'label' => 'Notes',
+            'label' => __('fields_columns.notes'),
             'type' => 'textarea',
             'attributes' => [
                 'onkeyup' => 'maiuscula(this)'
@@ -392,7 +392,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'number',
-            'label' => 'Number',
+            'label' => __('fields_columns.number'),
             'type' => 'number',
             'wrapper' => [
                 'class' => 'form-group col-md-6'
@@ -410,12 +410,12 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'organ_id',
-            'label' => 'Organ',
+            'label' => __('fields_columns.organ'),
             'type' => 'relationship',
             'model' => 'App\Models\Organ',
             'entity' => 'organ',
             'attribute' => 'name',
-            'placeholder' => 'Select organ',
+            'placeholder' => __('fields_columns.select') . ' ' . __('fields_columns.organ'),
             'allows_null' => true,
             'options' => (function (Builder $query) {
                 return $query->orderBy('name', 'ASC')
@@ -435,7 +435,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'phone',
-            'label' => 'Phone #',
+            'label' => trans('fields_columns.phone'),
             'type' => 'text',
             'tab' => $tab
         ]);
@@ -450,7 +450,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'short_name',
-            'label' => 'Short name',
+            'label' => __('fields_columns.short_name'),
             'type' => 'text',
             'tab' => $tab
         ]);
@@ -465,7 +465,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'siafi_code',
-            'label' => 'SIAFI Code',
+            'label' => __('fields_columns.siafi_code'),
             'type' => 'number',
             'tab' => $tab
         ]);
@@ -480,7 +480,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'siasg_code',
-            'label' => 'SIASG Code',
+            'label' => __('fields_columns.siasg_code'),
             'type' => 'number',
             'tab' => $tab
         ]);
@@ -495,7 +495,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'siorg_code',
-            'label' => 'SIORG Code',
+            'label' => __('fields_columns.siorg_code'),
             'type' => 'number',
             'tab' => $tab
         ]);
@@ -510,12 +510,12 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'state_id',
-            'label' => 'State',
+            'label' => __('fields_columns.state'),
             'type' => 'relationship',
             'model' => 'App\Models\State',
             'entity' => 'state',
             'attribute' => 'name',
-            'placeholder' => 'Select state',
+            'placeholder' => __('fields_columns.select') . ' ' . __('fields_columns.state'),
             'allows_null' => true,
             'options' => (function (Builder $query) {
                 return $query->orderBy('name', 'ASC')
@@ -535,7 +535,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'status',
-            'label' => 'Status',
+            'label' => __('fields_columns.status'),
             'type' => 'checkbox',
             'default' => true,
             'tab' => $tab
@@ -551,7 +551,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'timezone',
-            'label' => 'Timezone',
+            'label' => __('fields_columns.timezone'),
             'type' => 'select2_from_array',
             'allows_null' => true,
             'options' => \DateTimeZone::listIdentifiers(),
@@ -568,12 +568,12 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'type_id',
-            'label' => 'Type of creditor',
+            'label' => trans('fields_columns.type_of_creditor'),
             'type' => 'relationship',
             'model' => 'App\Models\CodeItem',
             'entity' => 'type',
             'attribute' => 'description',
-            'placeholder' => 'Select type of creditor',
+            'placeholder' => trans('fields_columns.select'). ' ' .trans('fields_columns.type_of_creditor'),
             'allows_null' => true,
             'attributes' => [
                 'id' => 'type_id',
@@ -596,12 +596,12 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'type_id',
-            'label' => 'Type of unit',
+            'label' => __('fields_columns.type_of_unit'),
             'type' => 'relationship',
             'model' => 'App\Models\CodeItem',
             'entity' => 'type',
             'attribute' => 'description',
-            'placeholder' => 'Select type of unit',
+            'placeholder' => __('fields_columns.select') . ' ' . __('fields_columns.type_of_unit'),
             'allows_null' => true,
             'options' => (function (Builder $query) {
                 return $query->orderBy('description', 'ASC')
@@ -621,7 +621,7 @@ trait CommonFields
     {
         CRUD::addField([
             'name' => 'zipcode',
-            'label' => 'Zip code',
+            'label' => __('fields_columns.zipcode'),
             'type' => 'text',
             'wrapper' => [
                 'class' => 'form-group col-md-6'

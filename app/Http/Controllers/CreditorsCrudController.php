@@ -30,11 +30,11 @@ class CreditorsCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Creditors::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/creditors');
-        CRUD::setEntityNameStrings('creditors', 'creditors');
+        CRUD::setEntityNameStrings(__('crud.creditors.creditor'), __('crud.creditors.creditors'));
 
         $this->data['breadcrumbs'] = [
             trans('GeSic') => backpack_url('dashboard'),
-            trans('Creditors') => false,
+            __('crud.creditors.creditors') => false,
         ];
     }
 
@@ -74,8 +74,8 @@ class CreditorsCrudController extends CrudController
     {
         CRUD::setValidation(CreditorsRequest::class);
 
-        $tab1 = 'Basic information'; //__('backpack::crud.creditors.basis_information');
-        $tab2 = 'Addition information'; //__('backpack::crud.creditors.additional_information');
+        $tab1 = __('crud.creditors.basic_information');
+        $tab2 = __('crud.creditors.additional_information');
 
         $this->addFieldTypeOfCreditorCombo($tab1);
         $this->addFieldCreditorCodeCustom($tab1);
@@ -103,7 +103,7 @@ class CreditorsCrudController extends CrudController
     {
         CRUD::addColumn([
             'name' => 'type_id',
-            'label' => 'Type of creditor',
+            'label' => __('fields_columns.type_of_creditor'),
             'type' => 'model_function',
             'function_name' => 'getType',
             'visibleInTable' => true,
@@ -115,7 +115,7 @@ class CreditorsCrudController extends CrudController
     {
         CRUD::addColumn([
             'name' => 'code',
-            'label' => 'Code',
+            'label' => __('fields_columns.code'),
             'type' => 'text',
             'visibleInTable' => true,
             'visibleInExport' => true,
@@ -126,7 +126,7 @@ class CreditorsCrudController extends CrudController
     {
         CRUD::addColumn([
             'name' => 'name',
-            'label' => 'Name',
+            'label' => __('fields_columns.name'),
             'type' => 'text',
             'visibleInTable' => true,
             'visibleInExport' => true,
@@ -137,7 +137,7 @@ class CreditorsCrudController extends CrudController
     {
         CRUD::addColumn([
             'name' => 'address',
-            'label' => 'Address',
+            'label' => __('fields_columns.address'),
             'type' => 'text',
             'visibleInTable' => false,
             'visibleInExport' => true,
@@ -148,7 +148,7 @@ class CreditorsCrudController extends CrudController
     {
         CRUD::addColumn([
             'name' => 'number',
-            'label' => 'Number',
+            'label' => __('fields_columns.number'),
             'type' => 'number',
             'visibleInTable' => false,
             'visibleInExport' => true,
@@ -159,7 +159,7 @@ class CreditorsCrudController extends CrudController
     {
         CRUD::addColumn([
             'name' => 'zipcode',
-            'label' => 'Zipcode',
+            'label' => __('fields_columns.zipcode'),
             'type' => 'text',
             'visibleInTable' => false,
             'visibleInExport' => true,
@@ -170,7 +170,7 @@ class CreditorsCrudController extends CrudController
     {
         CRUD::addColumn([
             'name' => 'complement',
-            'label' => 'Complement',
+            'label' => __('fields_columns.complement'),
             'type' => 'text',
             'visibleInTable' => false,
             'visibleInExport' => true,
@@ -181,7 +181,7 @@ class CreditorsCrudController extends CrudController
     {
         CRUD::addColumn([
             'name' => 'country_id',
-            'label' => 'Country',
+            'label' => __('fields_columns.country'),
             'type' => 'model_function',
             'function_name' => 'getCountry',
             'visibleInTable' => true,
@@ -193,7 +193,7 @@ class CreditorsCrudController extends CrudController
     {
         CRUD::addColumn([
             'name' => 'state_id',
-            'label' => 'State',
+            'label' => __('fields_columns.state'),
             'type' => 'model_function',
             'function_name' => 'getState',
             'visibleInTable' => true,
@@ -205,7 +205,7 @@ class CreditorsCrudController extends CrudController
     {
         CRUD::addColumn([
             'name' => 'city_id',
-            'label' => 'City',
+            'label' => __('fields_columns.city'),
             'type' => 'model_function',
             'function_name' => 'getCity',
             'visibleInTable' => true,
@@ -217,7 +217,7 @@ class CreditorsCrudController extends CrudController
     {
         CRUD::addColumn([
             'name' => 'phone',
-            'label' => 'Phone',
+            'label' => __('fields_columns.phone'),
             'type' => 'text',
             'visibleInTable' => false,
             'visibleInExport' => true,
@@ -228,7 +228,7 @@ class CreditorsCrudController extends CrudController
     {
         CRUD::addColumn([
             'name' => 'consortium',
-            'label' => 'Consortium',
+            'label' => __('fields_columns.consortium'),
             'type' => 'boolean',
             'options' => [0 => 'No', 1 => 'Yes'],
             'visibleInTable' => false,
@@ -240,7 +240,7 @@ class CreditorsCrudController extends CrudController
     {
         CRUD::addColumn([
             'name' => 'contact_agent',
-            'label' => 'Contact agent',
+            'label' => __('fields_columns.contact_agent'),
             'type' => 'text',
             'visibleInTable' => false,
             'visibleInExport' => true,
@@ -251,7 +251,7 @@ class CreditorsCrudController extends CrudController
     {
         CRUD::addColumn([
             'name' => 'notes',
-            'label' => 'Notes',
+            'label' => __('fields_columns.notes'),
             'type' => 'text',
             'limit' => 150,
             'visibleInTable' => false,
