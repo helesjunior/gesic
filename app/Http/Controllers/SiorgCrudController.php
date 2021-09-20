@@ -29,6 +29,10 @@ class SiorgCrudController extends CrudController
         CRUD::setModel(\App\Models\Siorg::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/siorg');
         CRUD::setEntityNameStrings('siorg', 'siorgs');
+
+        CRUD::denyAccess('create');
+        CRUD::denyAccess('update');
+        CRUD::denyAccess('delete');
     }
 
     /**
@@ -39,6 +43,9 @@ class SiorgCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+        CRUD::orderBy('id');
+        CRUD::orderBy('father_id');
+
         CRUD::setFromDb(); // columns
 
         /**
