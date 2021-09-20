@@ -36,4 +36,5 @@ Route::group([
     Route::crud('unit', 'UnitCrudController');
 
     Route::crud('siorg', 'SiorgCrudController');
+    Route::get('testesiape', 'AdminController@testeSiape');
 }); // this should be the absolute last line of this file
