@@ -6,7 +6,7 @@ use App\Integrations\SiorgWS;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 
-class Siorg extends Model
+class Uorg extends Model
 {
     use CrudTrait;
 
@@ -16,17 +16,18 @@ class Siorg extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'siorgs';
+    protected $table = 'uorgs';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
     protected $fillable = [
-        'organ_id',
+        'siorg_id',
+        'unit_id',
         'father_id',
         'code',
         'short_description',
         'description',
-        'status'
+        'status',
     ];
     // protected $hidden = [];
     // protected $dates = [];
@@ -36,25 +37,33 @@ class Siorg extends Model
     | FUNCTIONS
     |--------------------------------------------------------------------------
     */
+
     public function getIdByCode($code)
     {
         return @$this->where('code',$code)->first()->id;
     }
+
+    public function firstOrCreateUorg($uorg)
+    {
+        $code = [
+            'code' => $uorg['code'],
+        ];
+
+        unset($uorg['code']);
+
+        $return = $this->firstOrCreate(
+            $code,
+            $uorg
+        );
+
+        return $return;
+    }
+
     /*
     |--------------------------------------------------------------------------
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-
-    public function father()
-    {
-        return $this->belongsTo(Siorg::class, 'father_id');
-    }
-
-    public function organ()
-    {
-        return $this->belongsTo(Organ::class);
-    }
 
     /*
     |--------------------------------------------------------------------------

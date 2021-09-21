@@ -2,6 +2,7 @@
 
 namespace app\Http\Controllers;
 
+use App\Http\Controllers\Siape\SiapeController;
 use App\Integrations\SiapeWs;
 use Illuminate\Routing\Controller;
 
@@ -33,18 +34,16 @@ class AdminController extends Controller
 
     public function testeSiape()
     {
-        $siape = new SiapeWs();
+        $teste = new SiapeController('40106');
 
-        $data = $siape->listaServidores('40106', '877');
+        dd($teste->execFunctionByName('getUorgsByOrgan'));
+
+//        $data = $siape->listaServidores('40106', '877');
 //        $return = $siape->consultaDadosPessoais('70074402153','40106');
+//        foreach ($data->out->Servidor as $servidor) {
+//            $data_servidore = $siape->consultaDadosPessoais($servidor->cpf,'40106');
+//            dump((is_object($data_servidore->out->nomeDefFisica))?'':$data_servidore->out->nomeDefFisica);
+//        }
 
-        foreach ($data->out->Servidor as $servidor) {
-            $data_servidore = $siape->consultaDadosPessoais($servidor->cpf,'40106');
-            dump((is_object($data_servidore->out->nomeDefFisica))?'':$data_servidore->out->nomeDefFisica);
-        }
-
-
-        dd($data->out);
-        dd($siape->listaServidores('40106', '877'));
     }
 }
