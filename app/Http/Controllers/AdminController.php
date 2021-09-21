@@ -39,7 +39,8 @@ class AdminController extends Controller
 //        $return = $siape->consultaDadosPessoais('70074402153','40106');
 
         foreach ($data->out->Servidor as $servidor) {
-            dump($siape->consultaDadosPessoais($servidor->cpf,'40106'));
+            $data_servidore = $siape->consultaDadosPessoais($servidor->cpf,'40106');
+            dump((is_object($data_servidore->out->nomeDefFisica))?'':$data_servidore->out->nomeDefFisica);
         }
 
 
