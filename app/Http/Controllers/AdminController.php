@@ -34,7 +34,16 @@ class AdminController extends Controller
     public function testeSiape()
     {
         $siape = new SiapeWs();
-        dd($siape->consultaDadosPessoais('','40106'));
-        dd($siape->listaServidores('40106','877'));
+
+        $data = $siape->listaServidores('40106', '877');
+//        $return = $siape->consultaDadosPessoais('70074402153','40106');
+
+        foreach ($data->out->Servidor as $servidor) {
+            dump($siape->consultaDadosPessoais($servidor->cpf,'40106'));
+        }
+
+
+        dd($data->out);
+        dd($siape->listaServidores('40106', '877'));
     }
 }

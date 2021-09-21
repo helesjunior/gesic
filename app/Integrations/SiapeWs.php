@@ -60,7 +60,7 @@ class SiapeWs
             //var_dump($e);
         }
 
-        return $client->__getLastResponse();
+        return $this->loadXmlStringAsArray($client->__getLastResponse());
     }
 
     public function listaUorgs($orgao, $uorg, $amb = 'PROD')
@@ -83,7 +83,7 @@ class SiapeWs
             //var_dump($e);
         }
 
-        return $client->__getLastResponse();
+        return $this->loadXmlStringAsArray($client->__getLastResponse());
     }
 
     public function dadosUorg($orgao, $uorg, $amb = 'PROD')
@@ -106,7 +106,7 @@ class SiapeWs
             //var_dump($e);
         }
 
-        return $client->__getLastResponse();
+        return $this->loadXmlStringAsArray($client->__getLastResponse());
     }
 
     public function listaServidores($orgao, $uorg, $amb = 'PROD')
@@ -129,7 +129,7 @@ class SiapeWs
             //var_dump($e);
         }
 
-        return $client->__getLastResponse();
+        return $this->loadXmlStringAsArray($client->__getLastResponse());
     }
 
     public function consultaDadosFuncionais($cpf, $orgao, $amb = 'PROD')
@@ -153,7 +153,7 @@ class SiapeWs
             //var_dump($e);
         }
 
-        return $client->__getLastResponse();
+        return $this->loadXmlStringAsArray($client->__getLastResponse());
     }
 
     public function consultaDadosFinanceiros($cpf, $orgao, $amb = 'PROD')
@@ -177,8 +177,13 @@ class SiapeWs
             //var_dump($e);
         }
 
-        return $client->__getLastResponse();
+        return $this->loadXmlStringAsArray($client->__getLastResponse());
     }
 
+    private function loadXmlStringAsArray($xmlString)
+    {
+        $xml = @simplexml_load_string(str_replace('ns2:','',str_replace('ns1:','', $xmlString)));
+        return json_decode(json_encode((array) $xml->xpath("//soap:Body/*")[0]));
+    }
 
 }

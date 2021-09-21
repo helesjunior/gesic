@@ -17,8 +17,6 @@ class CreateRubricsTable extends Migration
             $table->id();
             $table->string('code');
             $table->string('name');
-            $table->string('type');
-            $table->string('creation_on_siape');
             $table->boolean('status')->default(true);
             $table->timestamps();
             $table->softDeletes();
