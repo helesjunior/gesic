@@ -16,7 +16,7 @@ class UnitSeeder extends Seeder
     {
         $higher_organ = \App\Models\HigherOrgan::create([
             'code' => '63000',
-            'name' => 'Advocacia_Geral da União',
+            'name' => 'Advocacia-Geral da União',
             'status' => true
         ]);
 
@@ -24,7 +24,7 @@ class UnitSeeder extends Seeder
             'higher_organ_id' => $higher_organ->id,
             'code' => '63000',
             'code_siorg' => '46',
-            'name' => 'Advocacia_Geral da União',
+            'name' => 'Advocacia-Geral da União',
             'status' => true
         ]);
 

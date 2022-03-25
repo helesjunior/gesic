@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
             'name' => 'Heles Junior',
             'email' => 'helesjunior@gmail.com',
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'password' => '$2y$10$P.4doh27jPGTInpvf7zo8exdwJHYO1Hz3G5hFr9U.2J3yE0XGIHbW', // 123456
             'remember_token' => 'PJw4muvkwK',
             'language' => 'pt_br'
         ]);
