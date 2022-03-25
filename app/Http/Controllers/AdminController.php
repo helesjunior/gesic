@@ -35,8 +35,7 @@ class AdminController extends Controller
     public function testeSiape()
     {
         $teste = new SiapeController('40106');
-
-        dd($teste->execFunctionByName('getUorgsByOrgan'));
+        $teste->execFunctionByName('getUorgsByOrgan');
 
 //        $data = $siape->listaServidores('40106', '877');
 //        $return = $siape->consultaDadosPessoais('70074402153','40106');

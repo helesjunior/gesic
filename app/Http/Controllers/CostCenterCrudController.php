@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CostCenterRequest;
+use App\Http\Traits\CommonFields;
 use App\Models\User;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
@@ -19,6 +20,7 @@ class CostCenterCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
+    use CommonFields;
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
@@ -29,7 +31,7 @@ class CostCenterCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\CostCenter::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/cost-center');
-        CRUD::setEntityNameStrings('cost center', 'cost centers');
+        CRUD::setEntityNameStrings('Centro de Custo', 'Centro de Custos');
     }
 
     /**
@@ -49,8 +51,20 @@ class CostCenterCrudController extends CrudController
         ]);
 
         CRUD::addColumn([
+            'name'  => 'code',
+            'label' => 'Código',
+            'type'  => 'string'
+        ]);
+
+        CRUD::addColumn([
             'name'  => 'description',
-            'label' => 'Description',
+            'label' => 'Descrição',
+            'type'  => 'string'
+        ]);
+
+        CRUD::addColumn([
+            'name'  => 'year',
+            'label' => 'Ano Criação',
             'type'  => 'string'
         ]);
 
@@ -99,6 +113,12 @@ class CostCenterCrudController extends CrudController
             'name'      => 'description', // the db column for the foreign key
         ]);
 
+        CRUD::addField([  // Select2
+            'label'     => "Descrição",
+            'type'      => 'text',
+            'name'      => 'description', // the db column for the foreign key
+        ]);
+
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
@@ -116,5 +136,17 @@ class CostCenterCrudController extends CrudController
     protected function setupUpdateOperation()
     {
         $this->setupCreateOperation();
+    }
+
+
+    protected function addColumnCode()
+    {
+        CRUD::addColumn([
+            'name' => 'code',
+            'label' => __('fields_columns.code'),
+            'type' => 'text',
+            'visibleInTable' => true,
+            'visibleInExport' => true,
+        ]);
     }
 }

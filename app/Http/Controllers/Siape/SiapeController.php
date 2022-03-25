@@ -36,11 +36,16 @@ class SiapeController
     private function insertUorgs(array $return)
     {
         foreach ($return as $uorg) {
-            $details_uorg = $this->getUorgDetails($uorg['code']);
             $uorg_model = new Uorg();
-            $insert_uorg = $uorg_model->firstOrCreateUorg($details_uorg);
+            dump($uorg);
+            $insert_uorg = $uorg_model->firstOrCreateUorg($uorg);
+
+//            $details_uorg = $this->getUorgDetails($uorg['code']);
+//            $uorg_model = new Uorg();
+//            $insert_uorg = $uorg_model->firstOrCreateUorg($details_uorg);
+//            sleep(1);
+
             dump($insert_uorg->id);
-            sleep(1);
         }
         dd('Fim');
         return true;
