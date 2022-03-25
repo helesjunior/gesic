@@ -5,12 +5,14 @@
  *
  * @author Anderson Sathler M. Ribeiro <asathler@gmail.com>
  */
+
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UnitRequest;
 use App\Http\Traits\CommonColumns;
 use App\Http\Traits\CommonFields;
 use App\Http\Traits\CommonFilters;
+use App\Integrations\SiorgWS;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
 use Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
@@ -47,7 +49,7 @@ class UnitCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Unit::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/unit');
-        CRUD::setEntityNameStrings('units', 'units');
+        CRUD::setEntityNameStrings(__('crud.units.unit'), __('crud.units.units'));
     }
 
     /**

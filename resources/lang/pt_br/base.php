@@ -43,7 +43,7 @@ return [
     'click_here_to_reset'    => 'Clique aqui para resetar sua senha',
     'change_password'        => 'Mudar senha',
     'unauthorized'           => 'Sem autorização.',
-    'dashboard'              => 'Dashboard',
+    'dashboard'              => 'Início',
     'handcrafted_by'         => 'Feito por',
     'powered_by'             => 'Distribuído por',
     'my_account'             => 'Minha conta',
@@ -63,6 +63,7 @@ return [
     'error_saving'           => 'Erro ao salvar. Por favor, tente novamente.',
     'welcome'                => 'Bem vindo!',
     'use_sidebar'            => 'Use a barra de menu à esquerda para criar, editar ou excluir conteúdo.',
+    'text_dashboard'         => 'Essa é a ferramenta GeSIC - Gestão do Sistema de Informação de Custos.',
 
     'password_reset'         => [
         'greeting' => 'Olá!',

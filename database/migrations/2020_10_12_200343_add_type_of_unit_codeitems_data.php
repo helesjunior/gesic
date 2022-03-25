@@ -14,28 +14,28 @@ class AddTypeOfUnitCodeitemsData extends Migration
     public function up()
     {
         $code = \App\Models\Code::create([
-            'description' => 'Type of units',
+            'description' => 'Tipo Unidades',
             'is_visible' => false
         ]);
 
         $code_items = \App\Models\CodeItem::create([
             'code_id' => $code->id,
             'short_description' => 'E',
-            'description' => 'Executing Management Unit',
+            'description' => 'Gestora Executora',
             'is_visible' => true
         ]);
 
         $code_items = \App\Models\CodeItem::create([
             'code_id' => $code->id,
             'short_description' => 'C',
-            'description' => 'Control Unit',
+            'description' => 'Controle',
             'is_visible' => true
         ]);
 
         $code_items = \App\Models\CodeItem::create([
             'code_id' => $code->id,
             'short_description' => 'S',
-            'description' => 'Accounting Sector Unit',
+            'description' => 'Setorial Contábil',
             'is_visible' => true
         ]);
     }

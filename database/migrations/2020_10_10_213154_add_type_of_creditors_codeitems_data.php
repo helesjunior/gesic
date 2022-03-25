@@ -14,35 +14,35 @@ class AddTypeOfCreditorsCodeitemsData extends Migration
     public function up()
     {
         $code = \App\Models\Code::create([
-            'description' => 'Type of creditors',
+            'description' => 'Tipo Fornecedor',
             'is_visible' => false
         ]);
 
         $code_items = \App\Models\CodeItem::create([
             'code_id' => $code->id,
             'short_description' => '1',
-            'description' => 'Legal entity',
+            'description' => 'Pessoa Jurídica',
             'is_visible' => true
         ]);
 
         $code_items = \App\Models\CodeItem::create([
             'code_id' => $code->id,
             'short_description' => '2',
-            'description' => 'Natural person',
+            'description' => 'Pessoa Física',
             'is_visible' => true
         ]);
 
         $code_items = \App\Models\CodeItem::create([
             'code_id' => $code->id,
             'short_description' => '3',
-            'description' => 'Generic id',
+            'description' => 'Id Genérico',
             'is_visible' => true
         ]);
 
         $code_items = \App\Models\CodeItem::create([
             'code_id' => $code->id,
             'short_description' => '4',
-            'description' => 'Managing unit',
+            'description' => 'Unidade Gestora',
             'is_visible' => true
         ]);
     }

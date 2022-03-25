@@ -9,7 +9,7 @@ return [
     'code_items'            => 'Códigos e itens',
     'countries'             => 'Países',
     'creditors'             => 'Fornecedores',
-    'dashboard'             => 'Dashboard',
+    'dashboard'             => 'Início',
     'data'                  => 'Dados',
     'logs'                  => 'Registros',
     'nature_subitens'       => 'Naturezas de despesa',
@@ -19,5 +19,6 @@ return [
     'states'                => 'Estados',
     'units'                 => 'Unidades Gestoras',
     'users'                 => 'Usuários',
+    'siorg'                 => 'Siorgs',
 
 ];

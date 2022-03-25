@@ -64,7 +64,10 @@ class Unit extends Model
     | FUNCTIONS
     |--------------------------------------------------------------------------
     */
-
+    public function getIdByCode($code)
+    {
+        return @$this->where('siafi_code',$code)->first()->id;
+    }
     /*
     |--------------------------------------------------------------------------
     | RELATIONS

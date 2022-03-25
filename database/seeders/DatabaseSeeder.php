@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CurrencySeeder::class);
         $this->call(UnitSeeder::class);
         $this->call(CurrencyWebServiceSeeder::class);
+        $this->call(MonthYearSeeder::class);
     }
 }

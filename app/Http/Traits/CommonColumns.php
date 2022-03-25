@@ -35,7 +35,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'abbreviation',
-            'label' => 'Abbreviation',
+            'label' => __('fields_columns.abbreviation'),
             'type' => 'text',
             'visibleInTable' => true,
             'visibleInModal' => true,
@@ -60,7 +60,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'city_id',
-            'label' => 'City',
+            'label' => __('fields_columns.city'),
             'type' => 'select',
             'model' => 'App\Models\City',
             'entity' => 'city',
@@ -90,7 +90,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'code',
-            'label' => 'Code',
+            'label' => __('fields_columns.code'),
             'type' => 'number',
             'visibleInTable' => true,
             'visibleInModal' => true,
@@ -108,7 +108,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'country_id',
-            'label' => 'Country',
+            'label' => __('fields_columns.country'),
             'type' => 'select',
             'model' => 'App\Models\Country',
             'entity' => 'country',
@@ -138,7 +138,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'currency_id',
-            'label' => 'Currency',
+            'label' => __('fields_columns.currency'),
             'type' => 'select',
             'model' => 'App\Models\Currency',
             'entity' => 'currency',
@@ -168,7 +168,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'description',
-            'label' => 'Description',
+            'label' => __('fields_columns.description'),
             'type' => 'text',
             'visibleInTable' => true,
             'visibleInModal' => true,
@@ -193,7 +193,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'full_name',
-            'label' => 'Full name',
+            'label' => __('fields_columns.full_name'),
             'type' => 'text',
             'visibleInTable' => true,
             'visibleInModal' => true,
@@ -218,7 +218,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'is_capital',
-            'label' => 'Is capital',
+            'label' => __('fields_columns.is_capital'),
             'type' => 'boolean',
             'visibleInTable' => true,
             'visibleInModal' => true,
@@ -236,7 +236,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'latitude',
-            'label' => 'Latitude',
+            'label' => __('fields_columns.latitude'),
             'type' => 'text',
             'visibleInTable' => true,
             'visibleInModal' => true,
@@ -261,7 +261,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'longitude',
-            'label' => 'Longitude',
+            'label' => __('fields_columns.longitude'),
             'type' => 'text',
             'visibleInTable' => true,
             'visibleInModal' => true,
@@ -286,7 +286,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'name',
-            'label' => 'Name',
+            'label' => __('fields_columns.name'),
             'type' => 'text',
             'visibleInTable' => true,
             'visibleInModal' => true,
@@ -311,7 +311,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'nature_expediture_description',
-            'label' => 'Nature Expediture Description',
+            'label' => __('fields_columns.nature_expediture_description'),
             'type' => 'string',
             'visibleInTable' => true,
             'visibleInModal' => true,
@@ -329,7 +329,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'orgao_id',
-            'label' => 'Organ',
+            'label' => __('fields_columns.organ'),
             'type' => 'select',
             'model' => 'App\Models\Organ',
             'entity' => 'organ',
@@ -359,7 +359,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'phone',
-            'label' => 'Phone #',
+            'label' => __('fields_columns.phone'),
             'type' => 'phone',
             'visibleInTable' => true,
             'visibleInModal' => true,
@@ -385,7 +385,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'short_name',
-            'label' => 'Short name',
+            'label' => __('fields_columns.short_name'),
             'type' => 'text',
             'visibleInTable' => true,
             'visibleInModal' => true,
@@ -410,7 +410,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'siafi_code',
-            'label' => 'SIAFI Code',
+            'label' => __('fields_columns.siafi_code'),
             'type' => 'number',
             'thousands_sep' => '',
             'visibleInTable' => true,
@@ -439,7 +439,7 @@ trait CommonColumns
          *
         CRUD::addColumn([
             'name' => 'siasg_code',
-            'label' => 'SIASG Code',
+            'label' => __('fields_columns.siasg_code'),
             'type' => 'number',
             'thousands_sep' => '',
             'visibleInTable' => false, // true
@@ -458,7 +458,7 @@ trait CommonColumns
     }
 
     /**
-     * Add column to grid view for SIORG Code field.
+     * Add column to grid view for Integrations Code field.
      *
      * @author Anderson Sathler M. Ribeiro <asathler@gmail.com>
      */
@@ -466,7 +466,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'siorg_code',
-            'label' => 'SIORG Code',
+            'label' => __('fields_columns.siorg_code'),
             'type' => 'number',
             'thousands_sep' => '',
             'visibleInTable' => true,
@@ -492,7 +492,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'subItems',
-            'label' => 'Nature Expenditure SubItens',
+            'label' => __('fields_columns.nature_expenditure_subitens'),
             'type' => 'table',
             'visibleInTable' => true,
             'visibleInModal' => true,
@@ -514,7 +514,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'state_id',
-            'label' => 'State',
+            'label' => __('fields_columns.state'),
             'type' => 'select',
             'model' => 'App\Models\State',
             'entity' => 'state',
@@ -544,7 +544,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'status',
-            'label' => 'Status',
+            'label' => __('fields_columns.status'),
             'type' => 'boolean',
             'options' => [0 => 'Inactive', 1 => 'Active'], // Try comment this line
             'visibleInTable' => true,
@@ -563,7 +563,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'timezone',
-            'label' => 'Timezone',
+            'label' => __('fields_columns.timezone'),
             'type' => 'text',
             'visibleInTable' => true,
             'visibleInModal' => true,
@@ -589,7 +589,7 @@ trait CommonColumns
     {
         CRUD::addColumn([
             'name' => 'type_id',
-            'label' => 'Type',
+            'label' => __('fields_columns.type'),
             'type' => 'select',
             'model' => 'App\Models\CodeItem',
             'entity' => 'type',
