@@ -2148,16 +2148,16 @@
         },
         {
             "name": "laravie/parser",
-            "version": "v2.1.2",
+            "version": "v2.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravie/parser.git",
-                "reference": "e4f72a458ea7644702a48d352447b6030f1b8555"
+                "reference": "c11aa5a3feeea54115a4eebce475535e5ee2d16a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravie/parser/zipball/e4f72a458ea7644702a48d352447b6030f1b8555",
-                "reference": "e4f72a458ea7644702a48d352447b6030f1b8555",
+                "url": "https://api.github.com/repos/laravie/parser/zipball/c11aa5a3feeea54115a4eebce475535e5ee2d16a",
+                "reference": "c11aa5a3feeea54115a4eebce475535e5ee2d16a",
                 "shasum": ""
             },
             "require": {
@@ -2176,12 +2176,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Laravie\\Parser\\": "src/"
-                },
                 "files": [
                     "src/helpers.php"
-                ]
+                ],
+                "psr-4": {
+                    "Laravie\\Parser\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2209,7 +2209,7 @@
                     "type": "liberapay"
                 }
             ],
-            "time": "2020-09-11T07:25:55+00:00"
+            "time": "2021-12-07T14:02:00+00:00"
         },
         {
             "name": "league/commonmark",
@@ -6383,21 +6383,21 @@
         },
         {
             "name": "tightenco/collect",
-            "version": "v8.34.0",
+            "version": "v8.83.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tighten/collect.git",
-                "reference": "b069783ab0c547bb894ebcf8e7f6024bb401f9d2"
+                "reference": "369a4eebc0d1763e6eba30526f190eaa76b78e8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tighten/collect/zipball/b069783ab0c547bb894ebcf8e7f6024bb401f9d2",
-                "reference": "b069783ab0c547bb894ebcf8e7f6024bb401f9d2",
+                "url": "https://api.github.com/repos/tighten/collect/zipball/369a4eebc0d1763e6eba30526f190eaa76b78e8c",
+                "reference": "369a4eebc0d1763e6eba30526f190eaa76b78e8c",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2|^8.0",
-                "symfony/var-dumper": "^3.4 || ^4.0 || ^5.0"
+                "php": "^7.3|^8.0",
+                "symfony/var-dumper": "^3.4 || ^4.0 || ^5.0 || ^6.0"
             },
             "require-dev": {
                 "mockery/mockery": "^1.0",
@@ -6429,7 +6429,7 @@
                 "collection",
                 "laravel"
             ],
-            "time": "2021-03-29T21:29:00+00:00"
+            "time": "2022-03-18T22:24:16+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
