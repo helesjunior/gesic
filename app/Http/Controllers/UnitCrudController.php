@@ -50,6 +50,7 @@ class UnitCrudController extends CrudController
         CRUD::setModel(\App\Models\Unit::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/unit');
         CRUD::setEntityNameStrings(__('crud.units.unit'), __('crud.units.units'));
+        CRUD::orderBy('siafi_code','asc');
     }
 
     /**

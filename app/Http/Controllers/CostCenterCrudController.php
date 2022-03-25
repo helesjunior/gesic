@@ -32,6 +32,8 @@ class CostCenterCrudController extends CrudController
         CRUD::setModel(\App\Models\CostCenter::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/cost-center');
         CRUD::setEntityNameStrings('Centro de Custo', 'Centro de Custos');
+
+        CRUD::orderBy('year','desc');
     }
 
     /**
@@ -64,7 +66,7 @@ class CostCenterCrudController extends CrudController
 
         CRUD::addColumn([
             'name'  => 'year',
-            'label' => 'Ano Criação',
+            'label' => 'Ano',
             'type'  => 'string'
         ]);
 
